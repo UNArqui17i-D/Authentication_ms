@@ -7,10 +7,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-/**
- * Created by javergarav on 15/02/2017.
- */
-
 @Stateless
 public class UserService {
 
@@ -33,6 +29,8 @@ public class UserService {
     public User updateUser(long id, User user) {
         User userToUpdate = entityManager.find(User.class, id);
         userToUpdate.setName(user.getName());
+        userToUpdate.setUsername(user.getUsername());
+        userToUpdate.setPassword(user.getPassword());
         userToUpdate.setEmail(user.getEmail());
         return entityManager.merge(userToUpdate);
     }

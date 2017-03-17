@@ -11,10 +11,6 @@ import javax.ws.rs.core.UriInfo;
 import java.net.URI;
 import java.util.List;
 
-/**
- * Created by javergarav on 15/02/2017.
- */
-
 @Path("/users")
 public class UserResource {
 

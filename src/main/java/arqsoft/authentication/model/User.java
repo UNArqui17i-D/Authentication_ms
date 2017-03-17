@@ -2,10 +2,6 @@ package arqsoft.authentication.model;
 
 import javax.persistence.*;
 
-/**
- * Created by javergarav on 15/02/2017.
- */
-
 @Entity
 @Table(name = "users")
 @NamedQueries({@NamedQuery(name = User.FIND_ALL, query = "SELECT u FROM User u")})
@@ -18,6 +14,8 @@ public class User {
     private long id;
 
     private String name;
+    private String username;
+    private String password;
     private String email;
 
     public long getId() {
@@ -34,6 +32,22 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {

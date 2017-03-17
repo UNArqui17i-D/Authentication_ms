@@ -1,0 +1,6 @@
+arqsoft/authentication/model/User.class
+arqsoft/authentication/service/UserService.class
+arqsoft/authentication/service/RegisterService.class
+arqsoft/authentication/JAXRSConfiguration.class
+arqsoft/authentication/service/LoginService.class
+arqsoft/authentication/resource/UserResource.class

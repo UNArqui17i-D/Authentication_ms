@@ -1,6 +1,8 @@
 package arqsoft.authentication.resource;
 
 import arqsoft.authentication.model.User;
+import arqsoft.authentication.service.LoginService;
+import arqsoft.authentication.service.RegisterService;
 import arqsoft.authentication.service.UserService;
 
 import javax.ejb.EJB;
@@ -8,7 +10,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-import java.net.URI;
 import java.util.List;
 
 @Path("/users")
@@ -18,6 +19,8 @@ public class UserResource {
     UriInfo uriInfo;
 
     @EJB
+    RegisterService registerService;
+    LoginService loginService;
     UserService userService;
 
     @GET
@@ -32,9 +35,17 @@ public class UserResource {
     }
 
     @POST
-    public Response createUser(User user) {
-        userService.createUser(user);
+    public Response register(User user) {
+        registerService.registerUser(user);
         return Response.status(Response.Status.CREATED).build();
+    }
+
+    @POST
+    @Path("{username}/{password}")
+    public Response login(@PathParam("username") String username, @PathParam("password") String password) {
+        return loginService.login(username, password)
+                ? Response.status(Response.Status.OK).build()
+                :Response.status(Response.Status.NOT_FOUND).build();
     }
 
     @PUT

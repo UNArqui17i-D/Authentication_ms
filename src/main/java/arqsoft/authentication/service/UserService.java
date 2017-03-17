@@ -22,10 +22,6 @@ public class UserService {
         return entityManager.find(User.class, id);
     }
 
-    public void createUser(User user) {
-        entityManager.persist(user);
-    }
-
     public User updateUser(long id, User user) {
         User userToUpdate = entityManager.find(User.class, id);
         userToUpdate.setName(user.getName());

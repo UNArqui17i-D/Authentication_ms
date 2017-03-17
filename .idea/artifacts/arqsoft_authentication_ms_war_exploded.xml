@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="arqsoft-authentication-ms:war exploded">
+    <output-path>$PROJECT_DIR$/target/authentication</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="arqsoft-authentication-ms" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/authentication/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="arqsoft-authentication-ms/web/Web" />
+    </root>
+  </artifact>
+</component>

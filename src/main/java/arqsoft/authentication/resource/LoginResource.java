@@ -25,7 +25,7 @@ public class LoginResource {
         }
         return loginService.login(user.getUsername(), user.getPassword())
                 ? Response.status(Response.Status.OK).build()
-                : Response.status(Response.Status.NOT_FOUND).build();
+                : Response.status(Response.Status.UNAUTHORIZED).build();
     }
 
 }

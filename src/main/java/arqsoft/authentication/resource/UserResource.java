@@ -19,8 +19,6 @@ public class UserResource {
     UriInfo uriInfo;
 
     @EJB
-    RegisterService registerService;
-    LoginService loginService;
     UserService userService;
 
     @GET
@@ -31,21 +29,8 @@ public class UserResource {
     @GET
     @Path("{id}")
     public User getUserById(@PathParam("id") long id) {
+	int i = 0;
         return userService.getUserById(id);
-    }
-
-    @POST
-    public Response register(User user) {
-        registerService.registerUser(user);
-        return Response.status(Response.Status.CREATED).build();
-    }
-
-    @POST
-    @Path("{username}/{password}")
-    public Response login(@PathParam("username") String username, @PathParam("password") String password) {
-        return loginService.login(username, password)
-                ? Response.status(Response.Status.OK).build()
-                :Response.status(Response.Status.NOT_FOUND).build();
     }
 
     @PUT

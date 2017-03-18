@@ -13,7 +13,7 @@ public class LoginService {
     EntityManager entityManager;
 
     public boolean login(String username, String password) {
-        User user = entityManager.createNamedQuery
+        User user = entityManager.createQuery
                 ("SELECT * FROM username = '" + username + "' AND '" + password + "';", User.class)
                 .getSingleResult();
         return user == null ? false : true;

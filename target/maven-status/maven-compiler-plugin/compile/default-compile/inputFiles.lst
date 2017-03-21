@@ -1,6 +1,7 @@
 /home/erickvelasco11/IdeaProjects/Authentication_ms/src/main/java/arqsoft/authentication/service/RegisterService.java
 /home/erickvelasco11/IdeaProjects/Authentication_ms/src/main/java/arqsoft/authentication/JAXRSConfiguration.java
 /home/erickvelasco11/IdeaProjects/Authentication_ms/src/main/java/arqsoft/authentication/resource/UserResource.java
+/home/erickvelasco11/IdeaProjects/Authentication_ms/src/main/java/arqsoft/authentication/utils/Tools.java
 /home/erickvelasco11/IdeaProjects/Authentication_ms/src/main/java/arqsoft/authentication/resource/LoginResource.java
 /home/erickvelasco11/IdeaProjects/Authentication_ms/src/main/java/arqsoft/authentication/service/UserService.java
 /home/erickvelasco11/IdeaProjects/Authentication_ms/src/main/java/arqsoft/authentication/model/User.java

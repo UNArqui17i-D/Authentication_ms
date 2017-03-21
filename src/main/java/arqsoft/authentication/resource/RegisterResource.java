@@ -25,5 +25,4 @@ public class RegisterResource {
         registerService.registerUser(user);
         return Response.status(Response.Status.CREATED).build();
     }
-
 }

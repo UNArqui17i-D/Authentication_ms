@@ -21,13 +21,11 @@ public class LoginResource {
 
     @POST
     @Consumes("application/json")
-    public Response login(Login login) {
+    public User login(Login login) {
         if (login.getUsername() == null || login.getPassword() == null) {
-            return Response.status(Response.Status.NOT_ACCEPTABLE).build();
+            return null;
         }
-        return loginService.login(login.getUsername(), login.getPassword())
-                ? Response.status(Response.Status.OK).build()
-                : Response.status(Response.Status.BAD_REQUEST).build();
+        return loginService.login(login.getUsername(), login.getPassword());
     }
 
 }

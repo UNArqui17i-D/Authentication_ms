@@ -27,19 +27,22 @@ public class SessionResource {
     }
 
     @POST
-    public Response createSession(Session session) {
+    public Session createSession(Session session) {
         if(session.getUserId() != 0){
-            sessionService.createSession(session);
-            return Response.status(Response.Status.CREATED).build();
+	    Session s = sessionService.createSession(session);
+            if(s != null) {
+                return s;
+            }
+            return null;
         }else{
-            return Response.status(Response.Status.BAD_REQUEST).build();
+            return null;
         }
     }
 
     @DELETE
-    @Path("{token}")
-    public Response deleteSession(@PathParam("token") String token) {
-        sessionService.deleteSession(token);
+    @Path("{userId}")
+    public Response deleteSession(@PathParam("userId") long userId) {
+        sessionService.deleteSession(userId);
         return Response.status(Response.Status.OK).build();
     }
 

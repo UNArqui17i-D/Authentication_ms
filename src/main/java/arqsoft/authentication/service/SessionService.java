@@ -20,18 +20,23 @@ public class SessionService {
         return entityManager.find(Session.class, userId);
     }
 
-    public void createSession(Session session) {
-        SecureRandom random = new SecureRandom();
-        byte bytes[] = new byte[20];
-        random.nextBytes(bytes);
-        String token = bytes.toString();
-        session.setToken(token);
-        entityManager.persist(session);
+    public Session createSession(Session session) {
+        try {
+            SecureRandom random = new SecureRandom();
+            byte bytes[] = new byte[20];
+            random.nextBytes(bytes);
+            String token = bytes.toString();
+            session.setToken(token);
+            entityManager.persist(session);
+            return session;
+        }catch(Exception e){
+            return null;
+        }
     }
 
-    public void deleteSession(String token) {
+    public void deleteSession(long userId) {
         Session session = entityManager.createQuery
-                ("SELECT u FROM Session u WHERE u.token LIKE '" + token + "'", Session.class).getSingleResult();
+                ("SELECT u FROM Session u WHERE u.userId LIKE " + userId, Session.class).getSingleResult();
         entityManager.remove(session);
         /*Session session = entityManager.find(Session.class, token);
         entityManager.remove(session);*/

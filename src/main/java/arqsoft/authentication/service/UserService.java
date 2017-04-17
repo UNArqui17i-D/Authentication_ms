@@ -38,8 +38,9 @@ public class UserService {
     }
 
     public User getUserByUsername(String username) {
-        return entityManager.createQuery
-                ("SELECT u FROM User u WHERE u.username LIKE '" + username + "'", User.class).getSingleResult();
+        System.out.println("Username "+username);
+        entityManager.createQuery("SELECT u FROM User u WHERE u.username LIKE '" + username + "'", User.class).getSingleResult();
+        return user;
         //return entityManager.find(User.class, username);
     }
 }

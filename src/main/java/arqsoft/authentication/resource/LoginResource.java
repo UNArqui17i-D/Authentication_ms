@@ -30,10 +30,12 @@ public class LoginResource {
             SessionService sessionService = new SessionService();
             UserService userService = new UserService();
             User u = userService.getUserByUsername(login.getUsername());
-            Session session = new Session();
-            session.setUserId(u.getId());
-            sessionService.createSession(session);
-            return Response.status(Response.Status.OK).build();
+            if(u != null){
+                Session session = new Session();
+                session.setUserId(u.getId());
+                sessionService.createSession(session);
+                return Response.status(Response.Status.OK).build();
+            }
         }
         return Response.status(Response.Status.BAD_REQUEST).build();
     }

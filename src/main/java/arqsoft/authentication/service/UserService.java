@@ -36,4 +36,7 @@ public class UserService {
         entityManager.remove(user);
     }
 
+    public User getUserByUsername(String username) {
+        return entityManager.find(User.class, username);
+    }
 }

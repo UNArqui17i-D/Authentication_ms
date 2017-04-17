@@ -16,8 +16,6 @@ public class LoginService {
 
     public boolean login(String username, String password) {
 
-        System.out.print(username+", "+password);
-
         List<User> users = entityManager.createQuery
                 ("SELECT u FROM User u WHERE u.username LIKE '" + username + "' AND u.password LIKE '" + Tools.Encrypt(password) + "'", User.class)
                 .getResultList();

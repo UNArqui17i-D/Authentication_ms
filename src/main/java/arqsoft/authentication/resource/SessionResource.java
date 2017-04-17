@@ -20,8 +20,6 @@ public class SessionResource {
     @EJB
     SessionService sessionService;
 
-    UserService userService;
-
     @GET
     @Path("{userId}")
     public Session getSessionByUserId(@PathParam("userId") long userId) {
@@ -29,11 +27,8 @@ public class SessionResource {
     }
 
     @POST
-    public Response createSession(User user) {
-        if(user.getUsername() != null){
-            User u = userService.getUserByUsername(user.getEmail());
-            Session session = new Session();
-            session.setUserId(u.getId());
+    public Response createSession(Session session) {
+        if(session.getUserId() != 0){
             sessionService.createSession(session);
             return Response.status(Response.Status.CREATED).build();
         }else{

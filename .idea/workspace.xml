@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c6c93745-25fc-4257-b40a-22d7967c39e6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/LoginResource.java" afterPath="$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/LoginResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/SessionResource.java" afterPath="$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/SessionResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/UserService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,19 +24,31 @@
       <file leaf-file-name="LoginResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/LoginResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+            <state relative-caret-position="306">
+              <caret line="29" column="71" lean-forward="true" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+            <state relative-caret-position="427">
+              <caret line="42" column="58" lean-forward="true" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionResource.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/SessionResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="19" column="147" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="19" selection-end-column="147" />
+              <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -81,9 +95,9 @@
         <option value="$PROJECT_DIR$/src/main/java/arqsoft/authentication/model/Session.java" />
         <option value="$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/SessionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/SessionResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/LoginResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/LoginResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/SessionResource.java" />
       </list>
     </option>
   </component>
@@ -874,7 +888,7 @@
       <workItem from="1492287610420" duration="62000" />
       <workItem from="1492313105352" duration="4000" />
       <workItem from="1492394503730" duration="1604000" />
-      <workItem from="1492396797557" duration="1794000" />
+      <workItem from="1492396797557" duration="2807000" />
     </task>
     <task id="LOCAL-00001" summary="Login Service">
       <created>1489814868089</created>
@@ -904,11 +918,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492397328118</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="GetUserByUsername">
+      <created>1492399273874</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1492399273874</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12203000" />
+    <option name="totallyTimeSpent" value="13216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1338,20 +1359,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/SessionResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="427">
+          <caret line="42" column="58" lean-forward="true" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/LoginResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+        <state relative-caret-position="306">
+          <caret line="29" column="71" lean-forward="true" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -1359,16 +1378,18 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/LoginService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="19" column="147" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="19" selection-end-column="147" />
+          <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/arqsoft/authentication/resource/SessionResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

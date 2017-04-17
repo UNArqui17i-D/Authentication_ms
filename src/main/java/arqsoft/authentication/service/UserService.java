@@ -6,7 +6,6 @@ import arqsoft.authentication.utils.Tools;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import java.util.List;
 
 @Stateless
@@ -39,9 +38,8 @@ public class UserService {
     }
 
     public User getUserByUsername(String username) {
-        System.out.println("Username "+username);
-        Query query = entityManager.createQuery("SELECT u FROM User u WHERE u.username LIKE '" + username + "'");
-        return (User)query.getSingleResult();
+        return entityManager.createQuery
+                ("SELECT u FROM User u WHERE u.username LIKE '" + username + "'", User.class).getSingleResult();
         //return entityManager.find(User.class, username);
     }
 }

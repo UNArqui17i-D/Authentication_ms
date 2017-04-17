@@ -1,6 +1,7 @@
 package arqsoft.authentication.service;
 
 import arqsoft.authentication.model.User;
+import arqsoft.authentication.utils.Tools;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -37,6 +38,8 @@ public class UserService {
     }
 
     public User getUserByUsername(String username) {
-        return entityManager.find(User.class, username);
+        return entityManager.createQuery
+                ("SELECT u FROM User u WHERE u.username LIKE '" + username + "'", User.class).getSingleResult();
+        //return entityManager.find(User.class, username);
     }
 }

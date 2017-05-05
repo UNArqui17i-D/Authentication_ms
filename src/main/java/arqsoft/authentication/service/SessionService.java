@@ -21,6 +21,7 @@ public class SessionService {
     }
 
     public Session createSession(Session session) {
+
         try {
             SecureRandom random = new SecureRandom();
             byte bytes[] = new byte[20];

@@ -35,6 +35,7 @@ public class SessionService {
     }
 
     public void deleteSession(long userId) {
+
         Session session = entityManager.createQuery
                 ("SELECT u FROM Session u WHERE u.userId LIKE " + userId, Session.class).getSingleResult();
         entityManager.remove(session);

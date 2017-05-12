@@ -1,10 +1,9 @@
-authentication-db:
-  build: ./db-server
-  ports:
-    - "3306:3306"
-authentication-ms:
-  build: .
+jarkko-authentication:
+  image: jaquinonesg/jarkko_authentication
   ports:
     - "4000:4000"
-  links:
-    - authentication-db
+authentication-db:
+  #build: ./db-server
+  image: javergarav/arqsoft-authentication-db
+  ports:
+    - "3306:3306"

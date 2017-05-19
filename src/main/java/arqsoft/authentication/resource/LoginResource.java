@@ -3,7 +3,6 @@ package arqsoft.authentication.resource;
 import arqsoft.authentication.model.Login;
 import arqsoft.authentication.model.Session;
 import arqsoft.authentication.model.User;
-import arqsoft.authentication.service.LdapService;
 import arqsoft.authentication.service.LoginService;
 import arqsoft.authentication.service.SessionService;
 import arqsoft.authentication.service.UserService;
@@ -26,11 +25,7 @@ public class LoginResource {
         if (login.getUsername() == null || login.getPassword() == null) {
             return null;
         }
-        LdapService LdapLogin = new LdapService();
-        if(LdapLogin.login(login.getUsername(),login.getPassword())){
             return loginService.login(login.getUsername(), login.getPassword());
-        }
-        return null;
     }
 
 }

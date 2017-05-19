@@ -4,6 +4,6 @@ jarkko-authentication:
     - "4000:4000"
 authentication-db:
   #build: ./db-server
-  image: javergarav/arqsoft-authentication-db
+  image: maasencioh/arqsoft-authentication-db
   ports:
     - "3306:3306"
